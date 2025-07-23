@@ -18,9 +18,14 @@ A React + TypeScript frontend dashboard for sellers to view, filter, sort, and a
 
 ## 📸 Preview
 
-> _Add screenshots here later_  
-> Example:
-> ![Product Table Screenshot](./screenshots/table.png)
+<img width="1488" height="940" alt="image" src="https://github.com/user-attachments/assets/c12b5001-04a0-42c3-a18f-044f50fef6a0" />
+<img width="1460" height="938" alt="image" src="https://github.com/user-attachments/assets/1232bf4b-056d-4fb8-a0be-56498a6a8a19" />
+<img width="1375" height="555" alt="image" src="https://github.com/user-attachments/assets/0a46b719-9f8c-4473-a271-99900125bb71" />
+<img width="1342" height="847" alt="image" src="https://github.com/user-attachments/assets/5c4ad2c6-5a16-4219-8deb-76dd73a464bb" />
+
+
+
+
 
 ---
 
