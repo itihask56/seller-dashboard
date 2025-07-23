@@ -48,31 +48,29 @@ const App = () => {
     return (
         <div className="container">
             <h1>Seller Product Manager </h1>
+            <div className="top-controls">
+                <AddProductModal onAdd={(newProduct) => setCustomProducts([newProduct, ...customProducts])} />
+                <input
+                    type="text"
+                    placeholder="Search by product title"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search-input"
+                />
 
+                <select
+                    className="dropdown-select"
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                >
+                    {categories.map((cat) => (
+                        <option key={cat} value={cat}>
+                            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                        </option>
+                    ))}
+                </select>
+            </div>
 
-            <AddProductModal onAdd={(newProduct) => setCustomProducts([newProduct, ...customProducts])} />
-
-            {/*  Search */}
-            <input
-                type="text"
-                placeholder="Search by product title"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="search-input"
-            />
-
-            {/*  Category Filter */}
-            <select
-                className="dropdown-select"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-                {categories.map((cat) => (
-                    <option key={cat} value={cat}>
-                        {cat.charAt(0).toUpperCase() + cat.slice(1)}
-                    </option>
-                ))}
-            </select>
 
             {/* Sort Controls */}
             <div className="sort-controls">

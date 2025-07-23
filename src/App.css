@@ -1,4 +1,44 @@
-/* App.css */
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Input & Selects */
+.search-input,
+.dropdown-select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Flex layout for sort controls */
+.sort-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Product Table */
 .product-table {
   width: 100%;
   border-collapse: collapse;
@@ -7,60 +47,119 @@
 
 .product-table th,
 .product-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
   text-align: center;
+  border: 1px solid #e0e0e0;
 }
 
 .product-table th {
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
+  font-weight: 600;
 }
 
 .product-table img {
+  width: 60px;
+  height: auto;
   border-radius: 4px;
 }
 
-.search-input {
-  width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-  font-size: 16px;
-  border: 1px solid #ccc;
+/* Add Product Button */
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
   border-radius: 6px;
-}
-
-
-.dropdown-select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
+  cursor: pointer;
+  font-size: 15px;
   margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
 }
 
-.search-input {
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.dropdown-select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.sort-controls {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
   margin-bottom: 20px;
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.modal-content button {
+  margin-right: 10px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.modal-content button[type='submit'] {
+  background-color: #1976d2;
+  color: white;
+}
+
+.modal-content button[type='button'] {
+  background-color: #e0e0e0;
+}
+
+
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Make inputs and selects shrink to fit*/
+.top-controls .search-input,
+.top-controls .dropdown-select {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Button width stays auto */
+.top-controls .add-btn {
+  flex-shrink: 0;
+}
+
+
+/* Responsive change */
+@media (max-width: 768px) {
+  .sort-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
